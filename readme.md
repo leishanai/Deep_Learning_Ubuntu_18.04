@@ -22,7 +22,12 @@ filetype plugin indent on    " required
 ```
 4. Launch vim and run ```:PluginInstall``` or run ```vim +PluginInstall +qall``` to install from command line.
 
-
+## Intall git
+As we need to clone some repos from github in some installations, it is necessary to install git.
+1. Run ```sudo apt-get install git``` to install git from shell
+2. Optionally intall [git prompt for bash](https://github.com/magicmonty/bash-git-prompt). It brings you informative git prompt when you are in a git repo.
+3. Run ```git config --global user.email "you@example.com"``` to add your github account
+4. Run ```git config --global user.name "Your Name"``` to add your name (not necessarily your github name)
 
 ## Install gcc
 
