@@ -37,7 +37,7 @@ As we need to clone some repos from github in some installations, it is necessar
 5. Run ```git config credential.helper store``` if you do not want to type username and password everytime you do git push.
 
 ### 3. GCC
-Install corresponding GCC version for CUDA. For Ubuntu-18.04 and CUDA-10.0, GCC-7.3 is required ([no higher than that](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html))
+Install corresponding GCC version for CUDA. For Ubuntu-18.04 and CUDA-10.0, GCC-7.3 is the [highest version supported](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
 
 ## GPU driver, CUDA and cuDNN
 ### 1. Install the latest Nvidia driver
@@ -57,7 +57,7 @@ It would just be one line of code, if you do not care about using up-to-date dri
 
 
 ### 2. Install CUDA
-* Download CUDA from Nvidia, choose ```.run``` file since ```.deb``` will replace gpu driver
+* Download CUDA from Nvidia, choose ```.run``` file since ```.deb``` will replace gpu driver with lower version
 * cd to the folder and run ```sudo sh cuda_10.1.105_418.39_linux.run```
 * Questions in the process:
 
