@@ -110,7 +110,7 @@ It would just be one line of code, if you do not care about using up-to-date dri
     sudo make
     ./deviceQuery
     ```
-or
+* or
     ```
     cd ../bandwidthTest
     sudo make
