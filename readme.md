@@ -7,7 +7,7 @@ In this tutorial, I will present how to build up deep learning environment in de
 ## Table of content
 <!-- vim-markdown-toc GFM -->
 
-* [Intall basic tools](#intall-basic-tools)
+* [Basic tools](#basic-tools)
     * [1. Vim](#1-vim)
     * [2. Git](#2-git)
     * [3. GCC](#3-gcc)
@@ -22,7 +22,7 @@ In this tutorial, I will present how to build up deep learning environment in de
     * [2. Python packages](#2-python-packages)
 
 <!-- vim-markdown-toc -->
-## Intall basic tools
+## Basic tools
 
 ### 1. Vim
 Personally, I prefer to use vim as default text editor.
