@@ -2,7 +2,7 @@
 
 In this tutorial, I will present how to build up deep learning environment in desktop. In my opinion, linux has much better performance than window 10. Everything should be done in about 2 hours. Vim is my default text editor in linux, so I will first introduce some basics in vim. If you are interested, I also attached my vimrc file. In the current meta, I installed, CUDA 10.0 and anaconda-python 3.6 which are the latest versions supported by tensorflow-gpu-1.13 (ts2.0 is not stable yet). 
 
-<img src="images/linux.png" width="70%" >
+<div align=center><img src="images/linux.png" width="70%" ></div>
 
 ## Table of content
 <!-- vim-markdown-toc GFM -->
@@ -163,7 +163,7 @@ You will see a fancy picture if you do the test three below.
     sudo make
     ./volumeRender
     ```
-<img src="images/cuda.png" width="40%" >
+<div align=center><img src="images/cuda.png" width="40%" ></div>
 
 ## Python environment
 
