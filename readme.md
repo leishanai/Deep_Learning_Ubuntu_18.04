@@ -32,11 +32,10 @@ Personally, I prefer to use vim as default text editor.
 
 ### 2. Git
 As we need to clone some repos from github in some installations, it is necessary to install git.
-1. Run ```sudo apt-get install git``` to install git from shell
-2. Optionally intall [git prompt for bash](https://github.com/magicmonty/bash-git-prompt). It brings you informative git prompt when you are in a git repo.
-3. Run ```git config --global user.email "you@example.com"``` to add your github account
-4. Run ```git config --global user.name "Your Name"``` to add your name (not necessarily your github name)
-5. Run ```git config credential.helper store``` if you do not want to type username and password everytime you do git push.
+* Run ```sudo apt-get install git``` to install git from shell
+* Run ```git config --global user.email "you@example.com"``` to add your github account
+* Run ```git config --global user.name "Your Name"``` to add your name (not necessarily your github name)
+* Run ```git config credential.helper store``` if you do not want to type username and password everytime you do git push.
 
 ### 3. GCC
 Install corresponding GCC version for CUDA. For Ubuntu-18.04 and CUDA-10.0, GCC-7.3 is the [highest version supported](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
