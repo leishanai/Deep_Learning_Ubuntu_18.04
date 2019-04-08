@@ -36,3 +36,5 @@ just set OS type as `other OS` and diable csm
 ## manual partition
 
 ## more to be added
+
+## test
