@@ -13,6 +13,7 @@
     2. add ```eval `dircolors ~/.dir_colors/dircolors-solarized/dircolors.256dark` ``` to ```~/.bashrc``` and source ```~/.bashrc```. [Check here](https://github.com/seebi/dircolors-solarized)
 
 ## Intall sougou-pinyin
+Trust me, there is no decent way to install it.
 * Intall fcitx, run ```sudo apt install fcitx-bin``` and ```sudo apt install fcitx-table```
 * Download [sougou-pinyin](https://pinyin.sogou.com/linux/?r=pinyin) and double click .deb file to install it.
 * Reboot and click the small keyboard icon on the top right corner of the screen. Choose configure and you will see sougou-pinyin is already added.
@@ -20,21 +21,26 @@
 * Open system setting, go to the Device and choose Keyboard. Remove two shortcuts for input as they conflict with fcitx.
 * Click "Show Advanced Options": change "Interval of Two Key Input" to 5 which decreases the delay of input. And add "Lshift" as the hotkey for "Inactivate Input Method". Click "Program" tab and change "Share State Among Window" to all.
 
-
-## Gnome Tweaks
-Just install it :)
-
 ## Something about shell, vim and python
 * Run```gnome-shell --version```to show the version of gnome terminal.
 * Run ```vim --version | grep +python``` to check if vim is python supported, e.g. ```+python3``` meaning support python3 and ```-python``` meaning not support python.
+* Gvim seems to be the best vim in ubuntu as it supports everything.
 
-## mouse acceleration remover
+## Kill mouse acceleration
+* Open file ```sudo vi /usr/share/X11/xorg.conf.d/50-mouse-acceleration.conf```
+* Add following
+    ```
+    Section "InputClass"
+        Identifier "My Mouse"
+        MatchIsPointer "yes"
+        Option "AccelerationProfile" "-1"
+        Option "AccelerationScheme" "none"
+        Option "AccelSpeed" "-1"
+    EndSection
+* Restart the session (logout/login)
 
-## UEFI install, disable csm, disable secure boot
-just set OS type as `other OS` and diable csm
+## UEFI install with Windows10
+UEFI is an alternative to BIOS booting. To install ubuntu along with windows10: Firstly, go to the BIOS setting and disable fast startup, CSM and secure boot(delete all keys or select other OS). And follow this [tutorial](http://myviewsonfoss.blogspot.com/2018/05/this-article-willshow-you-how-you-can.html). But if you have a dedicated graphic card, you will encounter black screen when you install and boot your system at the first time. To resolve this, for installation, go to the 'install ubuntu' option and press 'e', find 'quite splash', remove '---', add 'nomodeset' and press 'F10'. You will be directed to the installation normally. For the first time booting system, press 'e' at the first option, find 'splash', add 'nomodeset', and press F10. This bug is due the cause that ubuntu is not able to load Nvidia graphic card correctly.
 
-## manual partition
-
-## more to be added
-
-## test
+## Miscellanea
+Install Gnome tweaks, Panel OSD, sublime, slack, discord from built-in ubuntu software.
