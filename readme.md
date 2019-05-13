@@ -38,7 +38,7 @@ As we need to clone some repos from github in some installations, it is necessar
 * Run ```git config credential.helper store``` if you do not want to type username and password everytime you do git push.
 
 ### 3. GCC
-Install corresponding GCC version for CUDA. For Ubuntu-18.04 and CUDA-10.0, GCC-7.3 is the [highest version supported](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html). Download [GCC-7.3](https://ubuntu.pkgs.org/18.04/ubuntu-main-amd64/gcc-7_7.3.0-16ubuntu3_amd64.deb.html) and double click to install it.
+Install corresponding GCC version for CUDA. For Ubuntu-18.04 and CUDA-10.0, GCC-7.3 is the [highest version supported](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html). Download [GCC-7.3](https://ubuntu.pkgs.org/18.04/ubuntu-main-amd64/gcc-7_7.3.0-16ubuntu3_amd64.deb.html) and double click it to install.
 ```
 $ gcc --version
 gcc (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
@@ -83,25 +83,25 @@ It would just be one line of code, if you do not care about using up-to-date dri
 
     -----------------
     * Do you accept the previously read EULA?
-    accept/decline/quit: accept
+      accept/decline/quit: accept
 
     * Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48? # no as driver is installed
-    (y)es/(n)o/(q)uit: no
+      (y)es/(n)o/(q)uit: no
 
     * Install the CUDA 10.0 Toolkit?
-    (y)es/(n)o/(q)uit: yes
+      (y)es/(n)o/(q)uit: yes
 
     * Enter Toolkit Location # press enter if default
-    [ default is /usr/local/cuda-10.0 ]: 
+      [ default is /usr/local/cuda-10.0 ]: 
 
     * Do you want to install a symbolic link at /usr/local/cuda? # we will create symbolic link by ourselves
-    (y)es/(n)o/(q)uit: y
+      (y)es/(n)o/(q)uit: y
 
     * Install the CUDA 10.0 Samples? # depends on whether you want to run the test.
-    (y)es/(n)o/(q)uit: y
+      (y)es/(n)o/(q)uit: y
 
     * Enter CUDA Samples Location
-    [ default is /home/leishan ]: 
+      [ default is /home/leishan ]: 
 
     Installing the CUDA Toolkit in /usr/local/cuda-10.0 ...
     
