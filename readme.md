@@ -58,8 +58,9 @@ It would just be one line of code, if you do not care about using up-to-date dri
     ```
 * Make it effective ```sudo update-initramfs -u``` and reboot.
 * System becomes 800*600 resolution after reboot. Run ```lsmod | grep nouveau``` and if nothing shows up, it means nouveau is successfully disabled.
-* To make the file excutable, run ```sudo chmod 777 cuda_9.0.176_384.81_linux.run``` and run ```sudo ./cuda_9.0.176_384.81_linux.run --no-opengl-files –no-x-check –no-nouveau-check``` to install the driver.	Note that OPENGL yields login loop issue. X-check is equivalent to question 'Would you like to run the nvidia-xconfig utility to automatically update your X configuration file…' if this is not diabled.
-* Reboot and run ```nvidia-smi``` or ```nvidia-setting``` to obtain gpu driver info.
+* Download driver from [Nvidia website](https://www.nvidia.com/Download/index.aspx?lang=en-us)
+* To make the file excutable, run ```sudo chmod 777 NVIDIA-Linux-x86_64-418.74.run``` and run ```sudo ./NVIDIA-Linux-x86_64-418.74.run --no-opengl-files --no-x-check --no-nouveau-check``` to install the driver. Note that OPENGL yields login loop issue. X-check leads to question 'Would you like to run the nvidia-xconfig utility to automatically update your X configuration file…'. Remember to select no if popped out.
+* Reboot and run ```nvidia-smi``` or ```nvidia-setting``` to obtain gpu driver info. The resolution becomes normal after rebooting.
     
     ```
     $ nvidia-smi 
@@ -76,9 +77,37 @@ It would just be one line of code, if you do not care about using up-to-date dri
     CUDA version is 10.1 as it comes with GPU driver. The highest version of CUDA supported by tensorflow is 10.0. Below shows the intruction of how to install CUDA independently and manage multiple versions by using symbolic link.
 
 ### 2. Install CUDA
-* [Download CUDA](https://developer.nvidia.com/cuda-10.0-download-archive) from Nvidia, choose ```.run``` file since ```.deb``` will replace gpu driver with lower version
+* [Download CUDA](https://developer.nvidia.com/cuda-10.0-download-archive) from Nvidia, choose ```.run``` file since ```.deb``` will replace Nvidia driver with lower version
 * cd to the folder and run ```sudo sh cuda_10.0.130_410.48_linux.run```
-* Questions in the process:
+* Press Enter till question pop out:
+
+    -----------------
+    Do you accept the previously read EULA?
+    accept/decline/quit: accept
+
+    Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48? # no as driver is installed
+    (y)es/(n)o/(q)uit: no
+
+    Install the CUDA 10.0 Toolkit?
+    (y)es/(n)o/(q)uit: yes
+
+    Enter Toolkit Location # press enter if default
+    [ default is /usr/local/cuda-10.0 ]: 
+
+    Do you want to install a symbolic link at /usr/local/cuda? # we will create symbolic link by ourselves
+    (y)es/(n)o/(q)uit: y
+
+    Install the CUDA 10.0 Samples? # depends on whether you want to run the test.
+    (y)es/(n)o/(q)uit: y
+
+    Enter CUDA Samples Location
+    [ default is /home/leishan ]: 
+
+    Installing the CUDA Toolkit in /usr/local/cuda-10.0 ...
+    Installing the CUDA Samples in /home/leishan ...
+    Copying samples to /home/leishan/NVIDIA_CUDA-10.0_Samples now...
+    Finished copying samples.
+
 
     * Do you accept the previously read EULA?
     accept/decline/quit: accept
@@ -91,6 +120,7 @@ It would just be one line of code, if you do not care about using up-to-date dri
     * Do you want to install a symbolic link at /usr/local/cuda?
     (y)es/(n)o/(q)uit: y or n # we will create symbolic link by ourselves
     * Install the CUDA 9.0 Samples?	(y)es/(n)o/(q)uit: y or n # depends on whether you want to run the test.
+
 * Verify the verision installed, ```cat /usr/local/cuda/version.txt```
     ```
     $ cat /usr/local/cuda/version.txt
