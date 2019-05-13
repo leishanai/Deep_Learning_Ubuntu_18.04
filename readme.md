@@ -38,7 +38,7 @@ As we need to clone some repos from github in some installations, it is necessar
 * Run ```git config credential.helper store``` if you do not want to type username and password everytime you do git push.
 
 ### 3. GCC
-Install corresponding GCC version for CUDA. For Ubuntu-18.04 and CUDA-10.0, GCC-7.3 is the [highest version supported](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html)
+Install corresponding GCC version for CUDA. For Ubuntu-18.04 and CUDA-10.0, GCC-7.3 is the [highest version supported](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html). Download [GCC-7.3](https://ubuntu.pkgs.org/18.04/ubuntu-main-amd64/gcc-7_7.3.0-16ubuntu3_amd64.deb.html) and double click to install it.
 ```
 $ gcc --version
 gcc (Ubuntu 7.3.0-27ubuntu1~18.04) 7.3.0
@@ -104,8 +104,11 @@ It would just be one line of code, if you do not care about using up-to-date dri
     [ default is /home/leishan ]: 
 
     Installing the CUDA Toolkit in /usr/local/cuda-10.0 ...
+    
     Installing the CUDA Samples in /home/leishan ...
+    
     Copying samples to /home/leishan/NVIDIA_CUDA-10.0_Samples now...
+    
     Finished copying samples.
 
 * Verify the verision installed, ```cat /usr/local/cuda/version.txt```
@@ -183,22 +186,22 @@ You will see a fancy picture if you do the test three below.
 
 ## Python environment
 
-### 1. Install anaconda
-Anaconda is a great python tool to manage packages.
-* Download [anaconda python 3.6](https://repo.continuum.io/archive/)
-* Install anaconda, ```bash Anaconda3-5.2.0-Linux-x86_64.sh```
+### 1. Install miniconda
+Miniconda is a great python tool to manage packages.
+* Download [the latest miniconda](https://docs.conda.io/en/latest/miniconda.html)
+* Install miniconda, ```bash Anaconda3-5.2.0-Linux-x86_64.sh```
 * Create environment, ```conda create --name dlpy36 python=3.6```
 * Install required deep learning python packages under dlpy36. [Check here](https://www.digitalocean.com/community/tutorials/how-to-install-anaconda-on-ubuntu-18-04-quickstart).
-* For freshly opened terminal, run ```source activate dlpy36``` to switch on the environment with all required package installed.
+* For newly opened terminal, run ```source activate dlpy36``` to switch on the environment with all required package installed.
 
 ### 2. Python packages
 Make sure you are in the dlpy36 environment and then do the following,
 ```
-pip install keras (numpy)
+pip install keras (numpy will installed)
 pip install tensorflow-gpu (only support py3.6)
 pip install -U scikit-learn
 pip install pandas
-pip install seaborn (matplotlib)
+pip install seaborn (matplotlib will installed)
 pip install -U gensim
 ```
-Try to avoid using conda, as packages are not up-to-date and conda-forged tensorflow will install low verisions of CUDA and cuDNN.
+Now you have installed necessary dependencies if you are using Keras for deep learning projects. Try to avoid using conda installing packages, as they are not up-to-date. Besides, conda-forged tensorflow will install low verisions of CUDA and cuDNN.
