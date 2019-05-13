@@ -82,44 +82,31 @@ It would just be one line of code, if you do not care about using up-to-date dri
 * Press Enter till question pop out:
 
     -----------------
-    Do you accept the previously read EULA?
+    * Do you accept the previously read EULA?
     accept/decline/quit: accept
 
-    Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48? # no as driver is installed
+    * Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48? # no as driver is installed
     (y)es/(n)o/(q)uit: no
 
-    Install the CUDA 10.0 Toolkit?
+    * Install the CUDA 10.0 Toolkit?
     (y)es/(n)o/(q)uit: yes
 
-    Enter Toolkit Location # press enter if default
+    * Enter Toolkit Location # press enter if default
     [ default is /usr/local/cuda-10.0 ]: 
 
-    Do you want to install a symbolic link at /usr/local/cuda? # we will create symbolic link by ourselves
+    * Do you want to install a symbolic link at /usr/local/cuda? # we will create symbolic link by ourselves
     (y)es/(n)o/(q)uit: y
 
-    Install the CUDA 10.0 Samples? # depends on whether you want to run the test.
+    * Install the CUDA 10.0 Samples? # depends on whether you want to run the test.
     (y)es/(n)o/(q)uit: y
 
-    Enter CUDA Samples Location
+    * Enter CUDA Samples Location
     [ default is /home/leishan ]: 
 
     Installing the CUDA Toolkit in /usr/local/cuda-10.0 ...
     Installing the CUDA Samples in /home/leishan ...
     Copying samples to /home/leishan/NVIDIA_CUDA-10.0_Samples now...
     Finished copying samples.
-
-
-    * Do you accept the previously read EULA?
-    accept/decline/quit: accept
-    * Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.23?
-    (y)es/(n)o/(q)uit: n # no if you have the latest gpu driver
-    * Install the CUDA 9.0 Toolkit?
-    (y)es/(n)o/(q)uit: y
-    * Enter Toolkit Location
-    [ default is /usr/local/cuda-9.0 ]: # press enter if default
-    * Do you want to install a symbolic link at /usr/local/cuda?
-    (y)es/(n)o/(q)uit: y or n # we will create symbolic link by ourselves
-    * Install the CUDA 9.0 Samples?	(y)es/(n)o/(q)uit: y or n # depends on whether you want to run the test.
 
 * Verify the verision installed, ```cat /usr/local/cuda/version.txt```
     ```
