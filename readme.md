@@ -213,7 +213,7 @@ pip install -U gensim
 ```
 Now you have installed necessary dependencies if you are using Keras for deep learning projects. Try to avoid using conda installing packages, as they are not up-to-date. Besides, conda-forged tensorflow will install low verisions of CUDA and cuDNN.
 
-To add torch support
+To add pytorch support,
 ```
 sudo apt install python3-pip
 pip3 install torch torchvision
