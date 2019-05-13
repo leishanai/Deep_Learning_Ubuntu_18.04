@@ -18,7 +18,7 @@ In this tutorial, I will present how to build up deep learning environment in de
     * [4. Keep multiple versions of CUDA](#4-keep-multiple-versions-of-cuda)
     * [5. Verify GPU driver, CUDA and cuDNN](#5-verify-gpu-driver-cuda-and-cudnn)
 * [Python environment](#python-environment)
-    * [1. Install anaconda](#1-install-anaconda)
+    * [1. Install miniconda](#1-install-anaconda)
     * [2. Python packages](#2-python-packages)
 
 <!-- vim-markdown-toc -->
@@ -99,12 +99,15 @@ It would just be one line of code, if you do not care about using up-to-date dri
       [ default is /usr/local/cuda-10.0 ]: 
 
     * Do you want to install a symbolic link at /usr/local/cuda? # we will create symbolic link by ourselves
+      
       (y)es/(n)o/(q)uit: y
 
     * Install the CUDA 10.0 Samples? # depends on whether you want to run the test.
+      
       (y)es/(n)o/(q)uit: y
 
-    * Enter CUDA Samples Location
+    * Enter CUDA Samples Location # press Enter for default
+      
       [ default is /home/leishan ]: 
 
     Installing the CUDA Toolkit in /usr/local/cuda-10.0 ...
