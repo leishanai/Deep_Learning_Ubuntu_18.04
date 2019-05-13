@@ -43,4 +43,6 @@ Trust me, there is no decent way to install it.
 UEFI is an alternative to BIOS booting. To install ubuntu along with windows10: Firstly, go to the BIOS setting and disable fast startup, CSM and secure boot(delete all keys or select other OS). And follow this [tutorial](http://myviewsonfoss.blogspot.com/2018/05/this-article-willshow-you-how-you-can.html) to complete the rest. But if you have a dedicated graphic card, you will encounter black screen when you install and boot your system at the first time. To resolve this, for installation, go to the 'install ubuntu' option and press 'e', find 'quite splash', remove '---', add 'nomodeset' and press 'F10'. You will be directed to the installation normally. For the first time booting system, press 'e' at the first option, find 'splash', add 'nomodeset', and press F10. This bug is due the cause that ubuntu is not able to load Nvidia graphic card correctly.
 
 ## Miscellanea
-Install Gnome tweaks, Panel OSD, sublime, slack, discord from built-in ubuntu software.
+* Enable case-insensitive autocomplete add ```set completion-ignore-case on``` to ~/.inputrc and restart the terminal.
+* Disable edge tilting, ```$ dconf write /org/gnome/mutter/edge-tiling false```
+* Install Gnome tweaks, Panel OSD, sublime, slack, discord from built-in ubuntu software.
