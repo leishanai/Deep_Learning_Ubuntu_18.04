@@ -16,7 +16,8 @@
 Trust me, there is no decent way to install it.
 * Intall fcitx, run ```sudo apt install fcitx-bin``` and ```sudo apt install fcitx-table```
 * Download [sougou-pinyin](https://pinyin.sogou.com/linux/?r=pinyin) and double click .deb file to install it.
-* Reboot and click the small keyboard icon on the top right corner of the screen. Choose configure and you will see sougou-pinyin is already added.
+* Go settings, Region & Language, manage Installed Languages and add Chinese.
+* Reboot and click the small keyboard icon on the top right corner of the screen. Choose configure, click '+' icon, uncheck 'Only Show Current Language' and you will be able to add sougou-pinyin.
 * Go to the "Global Config" tab: Use "ctrl + space" to trigger input method. Disable "Extra key for trigger..." and disable "Enable Hotkey to scroll...".
 * Open system setting, go to the Device and choose Keyboard. Remove two shortcuts for input as they conflict with fcitx.
 * Click "Show Advanced Options": change "Interval of Two Key Input" to 5 which decreases the delay of input. And add "Lshift" as the hotkey for "Inactivate Input Method". Click "Program" tab and change "Share State Among Window" to all.
