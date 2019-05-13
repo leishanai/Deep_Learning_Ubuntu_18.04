@@ -83,15 +83,19 @@ It would just be one line of code, if you do not care about using up-to-date dri
 
     -----------------
     * Do you accept the previously read EULA?
+      
       accept/decline/quit: accept
 
     * Install NVIDIA Accelerated Graphics Driver for Linux-x86_64 410.48? # no as driver is installed
+      
       (y)es/(n)o/(q)uit: no
 
     * Install the CUDA 10.0 Toolkit?
+      
       (y)es/(n)o/(q)uit: yes
 
     * Enter Toolkit Location # press enter if default
+      
       [ default is /usr/local/cuda-10.0 ]: 
 
     * Do you want to install a symbolic link at /usr/local/cuda? # we will create symbolic link by ourselves
