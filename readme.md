@@ -33,9 +33,7 @@ Personally, I prefer to use vim as default text editor.
 ### 2. Git
 As we need to clone some repos from github in some installations, it is necessary to install git.
 * Run ```sudo apt-get install git``` to install git from shell
-* Run ```git config --global user.email "you@example.com"``` to add your github account
-* Run ```git config --global user.name "Your Name"``` to add your name (not necessarily your github name)
-* Run ```git config credential.helper store``` if you do not want to type username and password everytime you do git push.
+* Follow this [tutorial](https://help.github.com/en/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) to avoid typing username and password everytime push and pull updates.
 
 ### 3. GCC
 Install corresponding GCC version for CUDA. For Ubuntu-18.04 and CUDA-10.0, GCC-7.3 is the [highest version supported](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html). Download [GCC-7.3](https://ubuntu.pkgs.org/18.04/ubuntu-main-amd64/gcc-7_7.3.0-16ubuntu3_amd64.deb.html) and double click it to install.
@@ -218,3 +216,4 @@ To add pytorch support,
 sudo apt install python3-pip
 pip3 install torch torchvision
 ```
+To avoid iterating above for a new machine, one could make use of yml file in conda. Simply run ```$ conda env export > environment.yml``` in a well-installed machine to export all dependencies and packages, and run ```$ conda env create -f environment.yml``` in a new system.
